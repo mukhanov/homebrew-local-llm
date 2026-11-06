@@ -2,7 +2,7 @@ class LocalLlm < Formula
   desc "One command to run a local LLM on your Mac: picker, MLX or llama.cpp server, OpenAI and Anthropic APIs"
   homepage "https://github.com/mukhanov/local-llm"
   url "https://github.com/mukhanov/local-llm/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "6565c7b6b5ef606d403142bb956bc460648f52cf86101ffacc934c7f434472c2"
+  sha256 "346ebcf707c5023de6e61d0f062c1504bf39e1c763de93b4b4f61e45cc8f94ef"
   license "MIT"
 
   # MLX runs on Apple Silicon only; the app itself is macOS-only (curses stack)
@@ -12,7 +12,11 @@ class LocalLlm < Formula
   depends_on "uv"
 
   def install
-    libexec.install Dir["*"]
+    # unpack the tarball ourselves: brew strips README/LICENSE from the
+    # staging dir, and the editable install in libexec builds with
+    # pyproject.toml's readme pointing at the real file
+    mkdir_p libexec
+    system "tar", "--strip-components=1", "-xf", cached_download, "-C", libexec
     bin.install_symlink libexec/"local-llm"
   end
 
