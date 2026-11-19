@@ -7,8 +7,8 @@ cask "mlx-stack" do
   desc "Native tray and desktop monitor for local MLX models"
   homepage "https://github.com/mukhanov/mlx-stack"
 
-  depends_on arch: :arm
-  depends_on macos: ">= :sonoma"
+  depends_on arch: :arm64
+  depends_on macos: :sonoma
   depends_on formula: "mukhanov/local-llm/local-llm"
 
   app "MLX Stack.app"
