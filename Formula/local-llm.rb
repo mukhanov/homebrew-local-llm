@@ -1,8 +1,8 @@
 class LocalLlm < Formula
   desc "One command to run a local LLM on your Mac: picker, MLX or llama.cpp server, OpenAI and Anthropic APIs"
   homepage "https://github.com/mukhanov/local-llm"
-  url "https://github.com/mukhanov/local-llm/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "730ed51c9b941eed4d07750f4b694d75f645071e0cdcc91e4e45853cea97c5ea"
+  url "https://github.com/mukhanov/local-llm/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "e9453e39a01c8b00385b72cb3c95baa6d069122c81bbac2a00591c2f43354233"
   license "MIT"
 
   # MLX runs on Apple Silicon only; the app itself is macOS-only (curses stack)
