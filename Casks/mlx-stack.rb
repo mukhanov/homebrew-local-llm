@@ -1,6 +1,6 @@
 cask "mlx-stack" do
-  version "0.1.1"
-  sha256 "e2843e8cc3c99b97dbad6b9d338072388c9ba4397759f4a9dc51ea3c1fa3d933"
+  version "0.1.2"
+  sha256 "0cd718238b707f633ee0a410650d66ecafd5e4c083039c72d2239c7b85d358fa"
 
   url "https://raw.githubusercontent.com/mukhanov/mlx-stack/v#{version}/releases/MLXStack-v#{version}.zip"
   name "MLX Stack"
